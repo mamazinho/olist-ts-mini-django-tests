@@ -1,0 +1,51 @@
+.olist-logo {
+    width: 8%;
+    min-width: 80px;
+    padding: 1%;
+    padding-left: 2%
+}
+
+body {
+    background-color: #EAEAF4;
+}
+
+ul .links {
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+}
+
+.formcontainer {
+    margin: 7%;
+    width: 45%;
+    padding:6%;
+    display: flex;
+    justify-content: center;
+    text-align: end;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.maintitle {
+    padding: 2%;
+}
+
+@media screen and (max-width: 800px) {
+
+    .formcontainer {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .formcontainer {
+        width: 70%;
+        background-color: transparent;
+    }
+}

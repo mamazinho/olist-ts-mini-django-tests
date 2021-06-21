@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}All products{% endblock %}
+
+{% block content %}
+
+<button>
+    <a class="nav-link" href="{% url 'new-product' 'new' %}">Add product</a>
+</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Pescrição</th>
+            <th>Preço</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+            <td><a href="{% url 'update-product' 'update' product.id %}">Editar</a></td>
+            <td><a href="{% url 'delete-product' 'delete' product.id %}">Deletar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
